@@ -4,10 +4,8 @@
 ![ECML PKDD 2026](https://img.shields.io/badge/ECML%20PKDD-2026-purple)
 ![Track](https://img.shields.io/badge/Track-Research%20Track-blue)
 [![Paper](https://img.shields.io/badge/Paper-In%20Press-red)](https://doi.org/10.1007/978-3-032-37670-1_24)
-
 ![Feature Augmentation](https://img.shields.io/badge/Focus-Feature%20Augmentation-blueviolet)
 ![Low-Dimensional Tabular Data](https://img.shields.io/badge/Data-Low--Dimensional%20Tabular%20Data-teal)
-
 ![Python](https://img.shields.io/badge/Python-3.10%2B-green)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
 ![Optuna](https://img.shields.io/badge/Optuna-Hyperparameter%20Tuning-brightgreen)
