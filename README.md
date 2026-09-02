@@ -96,6 +96,7 @@ In addition, `AugTab Try.ipynb` contains supplementary diagnostic and analysis c
 ├── pyproject.toml
 ├── setup.cfg
 ├── requirements.txt
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
@@ -127,3 +128,148 @@ The three primary interfaces correspond to:
 - `AugTabRegressor` — regression
 
 Lower-level configuration and model components are also exposed for users who want more control over the AugTab architecture and training configuration.
+
+### Main dependencies
+
+The repository uses the following main dependencies:
+
+```
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+optuna>=3.0
+torch>=2.0
+matplotlib>=3.6
+jupyter>=1.0
+notebook>=6.5
+ipykernel>=6.0
+tqdm>=4.64
+scipy>=1.9
+```
+## Installation
+
+You can install **AugTab** in several ways depending on your workflow.
+
+---
+
+### Option 1: Clone the Repository (Recommended for Development)
+
+```bash
+git clone https://github.com/zadid6pretam/AugTab.git
+cd AugTab
+pip install -r requirements.txt
+pip install -e .
+```
+
+- This is the recommended option if you want to modify the source code, run the provided experiment notebooks, reproduce the Optuna-based tuning workflow, or develop additional AugTab extensions.
+- Editable installation (`-e`) allows changes made inside the local `augtab/` package to be reflected immediately without reinstalling the package.
+
+---
+
+### Option 2: Install Directly from GitHub (No Cloning Needed)
+
+```bash
+pip install "git+https://github.com/zadid6pretam/AugTab.git"
+```
+
+- This installs the latest version of **AugTab** directly from the GitHub repository.
+
+After installation, the task-specific AugTab interfaces can be imported as:
+
+```python
+from augtab import AugTabClassifier, AugTabMulti, AugTabRegressor
+```
+
+---
+
+### Option 3: Use a Virtual Environment
+
+```bash
+python -m venv augtab-env
+
+# macOS / Linux
+source augtab-env/bin/activate
+
+# Windows
+# augtab-env\Scripts\activate
+
+git clone https://github.com/zadid6pretam/AugTab.git
+cd AugTab
+pip install -r requirements.txt
+pip install -e .
+```
+
+- Using a virtual environment is recommended to keep **AugTab** and its dependencies isolated from other Python projects.
+- Once activated, all AugTab dependencies and experiments will run within the isolated environment.
+
+---
+
+### Option 4: Local Install Without Editable Mode
+
+```bash
+git clone https://github.com/zadid6pretam/AugTab.git
+cd AugTab
+pip install -r requirements.txt
+pip install .
+```
+
+- This performs a standard local installation of AugTab.
+- Unlike editable mode, subsequent changes to the source code require reinstalling the package.
+
+After installation:
+
+```python
+from augtab import AugTabClassifier, AugTabMulti, AugTabRegressor
+```
+
+---
+
+### Option 5: Install from PyPI
+
+```bash
+pip install augtab
+```
+
+After installation, the main AugTab interfaces can be imported as:
+
+```python
+from augtab import AugTabClassifier, AugTabMulti, AugTabRegressor
+```
+
+The three high-level interfaces correspond to:
+
+- `AugTabClassifier` — binary classification
+- `AugTabMulti` — multiclass classification
+- `AugTabRegressor` — regression
+
+For example:
+
+```python
+from augtab import AugTabClassifier
+
+model = AugTabClassifier(
+    d_features=10,
+    k_aug=32,
+    device="cuda"
+)
+```
+
+Lower-level configuration and model components are also directly available:
+
+```python
+from augtab import (
+    FALConfig,
+    BackboneConfig,
+    RegularizerConfig,
+    AugTabConfig,
+    AugTabCore,
+)
+```
+
+A lightweight installation check is provided in:
+
+```text
+PIP_Install_Check.ipynb
+```
+
+which can be used to verify the PyPI installation, package imports, and basic AugTab functionality.
