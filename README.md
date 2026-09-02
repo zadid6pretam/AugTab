@@ -65,14 +65,21 @@ BibTeX:
 - **Project Page:** https://www.zadidhabib.com/augtab.html
 - **GitHub:** https://github.com/zadid6pretam/AugTab
 
-This repository is provided for the review process and currently includes:
+This repository contains the official implementation of **AugTab** together with example notebooks for reproducing the training workflow, hyperparameter tuning, evaluation, and package installation.
 
-- `AugTab.py` — core implementation of the AugTab model
-- `AugTab Try.ipynb` — example notebook demonstrating how to use AugTab with **Optuna-based hyperparameter tuning** and **5-fold cross-validation**, reporting **mean accuracy ± standard deviation** on the **Water Potability** dataset
+The repository currently includes:
 
-The notebook is written so that the dataset file and target column can be changed easily, allowing the same workflow to be reused for other tabular datasets.
+- `augtab/augtab.py` — core implementation of the **AugTab** framework, including the Feature Augmentation Layer (FAL), MLP backbone, regularization components, and task-specific interfaces for binary classification, multiclass classification, and regression.
+- `augtab/__init__.py` — package initialization file exposing the main AugTab classes and configuration objects through the `augtab` package.
+- `AugTab Try.ipynb` — example notebook demonstrating how to use AugTab with **Optuna-based hyperparameter tuning** and **5-fold cross-validation**, reporting **mean accuracy ± standard deviation** on the **Water Potability** dataset.
+- `PIP_Install_Check.ipynb` — lightweight notebook for verifying the **PyPI installation**, package imports, and basic AugTab functionality after installation with `pip install augtab`.
+- `pyproject.toml` — modern Python project and build-system configuration used for packaging and PyPI distribution.
+- `setup.cfg` — package metadata and configuration for installation and distribution.
+- `requirements.txt` — Python dependencies required to run AugTab and the accompanying experiments.
 
-In addition, the notebook includes supplementary diagnostic and analysis code used to further inspect AugTab’s behavior.
+The example notebook is written so that the dataset file and target column can be changed easily, allowing the same workflow to be reused for other low-dimensional tabular datasets.
+
+In addition, `AugTab Try.ipynb` contains supplementary diagnostic and analysis code used to further inspect AugTab's behavior during training and evaluation.
 
 ---
 
@@ -80,7 +87,43 @@ In addition, the notebook includes supplementary diagnostic and analysis code us
 
 ```text
 .
-├── AugTab.py
+├── augtab/
+│   ├── __init__.py
+│   └── augtab.py
+│
 ├── AugTab Try.ipynb
+├── PIP_Install_Check.ipynb
+├── pyproject.toml
+├── setup.cfg
 ├── requirements.txt
+├── LICENSE
 └── README.md
+```
+
+### Package Structure
+
+The installable Python package is contained in the `augtab/` directory:
+
+```text
+augtab/
+├── __init__.py
+└── augtab.py
+```
+
+The public API can therefore be imported directly from the package:
+
+```python
+from augtab import (
+    AugTabClassifier,
+    AugTabMulti,
+    AugTabRegressor,
+)
+```
+
+The three primary interfaces correspond to:
+
+- `AugTabClassifier` — binary classification
+- `AugTabMulti` — multiclass classification
+- `AugTabRegressor` — regression
+
+Lower-level configuration and model components are also exposed for users who want more control over the AugTab architecture and training configuration.
