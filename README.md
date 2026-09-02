@@ -26,13 +26,13 @@ The key idea is to make **feature augmentation itself learnable**. Instead of ap
 
 FAL constructs augmented features using:
 
-- **Cross-interaction branch** — learns explicit second-order feature interactions through factorized transformations.
-- **Nonlinear MLP branch** — learns nonlinear feature lifts from the original input.
-- **Learned projection** — combines and re-mixes complementary augmented representations.
-- **Input-adaptive gating** — determines which augmented dimensions should be activated for each sample.
-- **Budget-aware regularization** — controls the effective augmentation width and computational cost.
-- **Diversity and orthogonality regularization** — encourages augmented features to remain complementary rather than redundant.
-- **Drift consistency** — promotes stable augmented representations under distribution shifts and feature perturbations.
+- **Cross-interaction branch** - learns explicit second-order feature interactions through factorized transformations.
+- **Nonlinear MLP branch** - learns nonlinear feature lifts from the original input.
+- **Learned projection** - combines and re-mixes complementary augmented representations.
+- **Input-adaptive gating** - determines which augmented dimensions should be activated for each sample.
+- **Budget-aware regularization** - controls the effective augmentation width and computational cost.
+- **Diversity and orthogonality regularization** - encourages augmented features to remain complementary rather than redundant.
+- **Drift consistency** - promotes stable augmented representations under distribution shifts and feature perturbations.
 
 For an input feature vector \(x\), AugTab preserves the original features and concatenates them with the gated learned augmentation:
 
