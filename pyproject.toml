@@ -1,0 +1,111 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "augtab"
+version = "0.1.0"
+description = "AugTab: Learnable Feature Augmentation for Low-Dimensional Tabular Data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Al Zadid Sultan Bin Habib" },
+    { name = "Md Younus Ahamed" },
+    { name = "Md Asif Bin Syed" },
+    { name = "Md Samiul Islam" },
+    { name = "Muntasir Tabasum" },
+    { name = "Tanpia Tasnim" },
+    { name = "Md. Ekramul Islam" }
+]
+
+keywords = [
+    "tabular-data",
+    "tabular-learning",
+    "feature-augmentation",
+    "deep-learning",
+    "machine-learning",
+    "low-dimensional-data",
+    "pytorch",
+    "feature-engineering",
+    "feature-interactions",
+    "input-adaptive-gating"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "numpy>=1.23",
+    "torch>=2.0"
+]
+
+
+[project.optional-dependencies]
+experiments = [
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "optuna>=3.0",
+    "matplotlib>=3.6",
+    "tqdm>=4.64",
+    "scipy>=1.9"
+]
+
+notebooks = [
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "optuna>=3.0",
+    "matplotlib>=3.6",
+    "jupyter>=1.0",
+    "notebook>=6.5",
+    "ipykernel>=6.0",
+    "tqdm>=4.64",
+    "scipy>=1.9"
+]
+
+all = [
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "optuna>=3.0",
+    "matplotlib>=3.6",
+    "jupyter>=1.0",
+    "notebook>=6.5",
+    "ipykernel>=6.0",
+    "tqdm>=4.64",
+    "scipy>=1.9"
+]
+
+
+[project.urls]
+Homepage = "https://www.zadidhabib.com/augtab.html"
+Repository = "https://github.com/zadid6pretam/AugTab"
+Paper = "https://doi.org/10.1007/978-3-032-37670-1_24"
+Issues = "https://github.com/zadid6pretam/AugTab/issues"
+
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["augtab*"]
+exclude = [
+    "tests*",
+    "docs*"
+]
