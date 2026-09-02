@@ -1,13 +1,14 @@
-# AugTab: Learnable Feature Augmentation for Low-Dimensional Tabular Data
+# AugTab: Learnable Feature Augmentation for Low-Dimensional Tabular Data (ECML PKDD 2026 Research Track)
 
-![Anonymous Review](https://img.shields.io/badge/status-anonymous%20review-blue)
-![ECML-PKDD 2026](https://img.shields.io/badge/ECML--PKDD-2026-purple)
-![Paper ID 416](https://img.shields.io/badge/PID-416-orange)
+![Status](https://img.shields.io/badge/Status-Accepted-success)
+![ECML PKDD 2026](https://img.shields.io/badge/ECML%20PKDD-2026-purple)
+![Track](https://img.shields.io/badge/Track-Research%20Track-blue)
+[![Paper (In Press)](https://img.shields.io/badge/Paper-Springer-red)](https://doi.org/10.1007/978-3-032-37670-1_24)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-green)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
-![Optuna](https://img.shields.io/badge/Optuna-hyperparameter%20tuning-brightgreen)
-![Task](https://img.shields.io/badge/task-tabular%20learning-informational)
-![Model](https://img.shields.io/badge/model-AugTab-black)
+![Optuna](https://img.shields.io/badge/Optuna-Hyperparameter%20Tuning-brightgreen)
+![Task](https://img.shields.io/badge/Task-Tabular%20Learning-informational)
+![Model](https://img.shields.io/badge/Model-AugTab-black)
 
 Anonymous code repository for submission to **ECML-PKDD 2026**  
 **European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases 2026**  
