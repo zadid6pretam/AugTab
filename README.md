@@ -34,13 +34,13 @@ FAL constructs augmented features using:
 - **Diversity and orthogonality regularization** - encourages augmented features to remain complementary rather than redundant.
 - **Drift consistency** - promotes stable augmented representations under distribution shifts and feature perturbations.
 
-For an input feature vector \(x\), AugTab preserves the original features and concatenates them with the gated learned augmentation:
+For an input feature vector $x$, AugTab preserves the original features and concatenates them with the gated learned augmentation:
 
-\[
-\tilde{x} = x \oplus \big(g(x) \odot z(x)\big),
-\]
+$$
+\tilde{x} = x \oplus \big(g(x) \odot z(x)\big)
+$$
 
-where \(z(x)\) represents the candidate augmented features and \(g(x)\) provides input-dependent gates controlling their activation.
+where $z(x)$ represents the candidate augmented features and $g(x)$ provides input-dependent gates controlling their activation.
 
 AugTab is **not tied to a specific low-dimensional dataset**. The Feature Augmentation Layer is designed as a modular front end that can, in principle, be combined with different downstream tabular architectures. In the experiments reported in the paper, AugTab is instantiated with an **MLP backbone**.
 
