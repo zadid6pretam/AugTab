@@ -69,13 +69,14 @@ This repository contains the official implementation of **AugTab** together with
 
 The repository currently includes:
 
-- `augtab/augtab.py` — core implementation of the **AugTab** framework, including the Feature Augmentation Layer (FAL), MLP backbone, regularization components, and task-specific interfaces for binary classification, multiclass classification, and regression.
-- `augtab/__init__.py` — package initialization file exposing the main AugTab classes and configuration objects through the `augtab` package.
-- `AugTab Try.ipynb` — example notebook demonstrating how to use AugTab with **Optuna-based hyperparameter tuning** and **5-fold cross-validation**, reporting **mean accuracy ± standard deviation** on the **Water Potability** dataset.
-- `PIP_Install_Check.ipynb` — lightweight notebook for verifying the **PyPI installation**, package imports, and basic AugTab functionality after installation with `pip install augtab`.
-- `pyproject.toml` — modern Python project and build-system configuration used for packaging and PyPI distribution.
-- `setup.cfg` — package metadata and configuration for installation and distribution.
-- `requirements.txt` — Python dependencies required to run AugTab and the accompanying experiments.
+- `augtab/augtab.py` - core implementation of the **AugTab** framework, including the Feature Augmentation Layer (FAL), MLP backbone, regularization components, and task-specific interfaces for binary classification, multiclass classification, and regression.
+- `augtab/__init__.py` - package initialization file exposing the main AugTab classes and configuration objects through the `augtab` package.
+- `AugTab Try.ipynb` - example notebook demonstrating how to use AugTab with **Optuna-based hyperparameter tuning** and **5-fold cross-validation**, reporting **mean accuracy ± standard deviation** on the **Water Potability** dataset.
+- `PIP_Install_Check.ipynb` - lightweight notebook for verifying the **PyPI installation**, package imports, and basic AugTab functionality after installation with `pip install augtab`.
+- `pyproject.toml` - modern Python project and build-system configuration used for packaging and PyPI distribution.
+- `setup.cfg` - package metadata and configuration for installation and distribution.
+- `requirements.txt` - Python dependencies required to run AugTab and the accompanying experiments.
+- `iSyncTab_Architecture.png` - High-level architecture diagram of the iSyncTab framework.
 
 The example notebook is written so that the dataset file and target column can be changed easily, allowing the same workflow to be reused for other low-dimensional tabular datasets.
 
@@ -92,6 +93,7 @@ In addition, `AugTab Try.ipynb` contains supplementary diagnostic and analysis c
 │   └── augtab.py
 │
 ├── AugTab Try.ipynb
+├── AugTab_Architecture.png
 ├── PIP_Install_Check.ipynb
 ├── pyproject.toml
 ├── setup.cfg
@@ -123,9 +125,9 @@ from augtab import (
 
 The three primary interfaces correspond to:
 
-- `AugTabClassifier` — binary classification
-- `AugTabMulti` — multiclass classification
-- `AugTabRegressor` — regression
+- `AugTabClassifier` - binary classification
+- `AugTabMulti` - multiclass classification
+- `AugTabRegressor` - regression
 
 Lower-level configuration and model components are also exposed for users who want more control over the AugTab architecture and training configuration.
 
@@ -238,9 +240,9 @@ from augtab import AugTabClassifier, AugTabMulti, AugTabRegressor
 
 The three high-level interfaces correspond to:
 
-- `AugTabClassifier` — binary classification
-- `AugTabMulti` — multiclass classification
-- `AugTabRegressor` — regression
+- `AugTabClassifier` - binary classification
+- `AugTabMulti` - multiclass classification
+- `AugTabRegressor` - regression
 
 For example:
 
@@ -1941,3 +1943,66 @@ To apply AugTab to a new low-dimensional tabular dataset:
 13. Keep the test set completely separate from hyperparameter tuning and use it only for final evaluation.
 
 > **Recommended for new datasets:** The fixed-configuration examples are useful for quick experiments and installation checks, while the **Optuna + 5-fold cross-validation workflows** are recommended when reporting dataset-specific AugTab results.
+
+## Related Work and Project Context
+
+AugTab is part of my broader work on tabular deep learning, but it was developed as a **separate collaborative project outside my PhD dissertation research**. Like **ZAYAN**, it explores a complementary direction beyond my primary PhD research on feature ordering, sequencing, and high-dimensional tabular learning.
+
+For broader context, some of our related tabular and multimodal learning projects are listed below.
+
+### GOTabPFN - ICML 2026
+
+**GOTabPFN: From Feature Ordering to Compact Tokenization for Tabular Foundation Models on High-Dimensional Data**
+
+- **Venue:** International Conference on Machine Learning (ICML 2026)
+- **GitHub:** https://github.com/zadid6pretam/GOTabPFN
+
+### iSyncTab - ECCV 2026
+
+**iSyncTab: Learning Cross-Modal Feature Sequencing for Image-Tabular Data via Neural Synchrony**
+
+- **Venue:** European Conference on Computer Vision (ECCV 2026)
+- **GitHub:** https://github.com/zadid6pretam/iSyncTab
+
+### BSTabDiff - ICLR 2026 DeLTa Workshop
+
+**BSTabDiff: Block-Subunit Diffusion Priors for High-Dimensional Tabular Data Generation**
+
+- **Venue:** ICLR 2026 Workshop on Deep Generative Models in Machine Learning: Theory, Principle and Efficacy (DeLTa)
+- **GitHub:** https://github.com/zadid6pretam/BSTabDiff
+
+### iStructTab - ICPR 2026
+
+**iStructTab: Structured Feature Sequencing for Multimodal Learning of Image and Tabular Data**
+
+- **Venue:** International Conference on Pattern Recognition (ICPR 2026)
+- **GitHub:** https://github.com/zadid6pretam/iStructTab
+
+### DynaTab - AAAI 2026 NeurAI Workshop
+
+**DynaTab: Dynamic Feature Ordering as Neural Rewiring for High-Dimensional Tabular Data**
+
+- **Venue:** AAAI 2026 Workshop on NeuroAI Multimodal Intelligence
+- **GitHub:** https://github.com/zadid6pretam/DynaTab
+
+### TabSeq - ICPR 2024
+
+**TabSeq: A Framework for Deep Learning on Tabular Data via Sequential Ordering**
+
+- **Venue:** International Conference on Pattern Recognition (ICPR 2024)
+- **GitHub:** https://github.com/zadid6pretam/TabSeq
+
+---
+
+### ZAYAN - ICPR 2026
+
+**ZAYAN: Disentangled Contrastive Transformer for Tabular Remote Sensing Data**
+
+- **Venue:** International Conference on Pattern Recognition (ICPR 2026)
+- **GitHub:** https://github.com/zadid6pretam/ZAYAN
+
+> **Note:** AugTab and ZAYAN were developed as separate collaborative projects outside my PhD dissertation research.
+
+## Contact
+
+For any questions, issues, or suggestions related to AugTab, please feel free to open an issue on GitHub.
