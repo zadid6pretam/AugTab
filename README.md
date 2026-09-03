@@ -76,7 +76,7 @@ The repository currently includes:
 - `pyproject.toml` - modern Python project and build-system configuration used for packaging and PyPI distribution.
 - `setup.cfg` - package metadata and configuration for installation and distribution.
 - `requirements.txt` - Python dependencies required to run AugTab and the accompanying experiments.
-- `iSyncTab_Architecture.png` - High-level architecture diagram of the iSyncTab framework.
+- `AugTab_Architecture.png` - High-level architecture diagram of the AugTab framework.
 
 The example notebook is written so that the dataset file and target column can be changed easily, allowing the same workflow to be reused for other low-dimensional tabular datasets.
 
