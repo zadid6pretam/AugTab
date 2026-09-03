@@ -1,4 +1,4 @@
-# AugTab: Learnable Feature Augmentation for Low-Dimensional Tabular Data (ECML PKDD 2026 Research Track)
+# AugTab: Learnable Feature Augmentation for Low-Dimensional Tabular Data
 
 ![Status](https://img.shields.io/badge/Status-Accepted-success)
 ![ECML PKDD 2026](https://img.shields.io/badge/ECML%20PKDD-2026-purple)
