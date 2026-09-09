@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Accepted-success)
 ![ECML PKDD 2026](https://img.shields.io/badge/ECML%20PKDD-2026-purple)
 ![Track](https://img.shields.io/badge/Track-Research%20Track-blue)
-[![Paper](https://img.shields.io/badge/Paper-In%20Press-red)](https://doi.org/10.1007/978-3-032-37670-1_24)
+[![Paper](https://img.shields.io/badge/Paper-Published-red)](https://doi.org/10.1007/978-3-032-37670-1_24)
 ![Feature Augmentation](https://img.shields.io/badge/Focus-Feature%20Augmentation-blueviolet)
 ![Low-Dimensional Tabular Data](https://img.shields.io/badge/Data-Low--Dimensional%20Tabular%20Data-teal)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-green)
@@ -61,7 +61,7 @@ BibTeX:
 }
 ```
 
-- **Paper:** https://doi.org/10.1007/978-3-032-37670-1_24 *(In Press)*
+- **Paper:** https://link.springer.com/chapter/10.1007/978-3-032-37670-1_24
 - **Project Page:** https://www.zadidhabib.com/augtab.html
 - **GitHub:** https://github.com/zadid6pretam/AugTab
 
